@@ -7,7 +7,7 @@ import {
   AfterViewInit,
   OnDestroy,
   ViewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { ColumnState } from './interfaces';
 
@@ -17,14 +17,7 @@ import { ColumnState } from './interfaces';
   template: `
     <span *ngIf="!column.def.component" [attr.title]="getFormattedValue()">{{ getFormattedValue() }}</span>
     <span *ngIf="column.def.component" #cmpContainer></span>
-  `,
-  styles: [`
-    :host {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  `]
+  `
 })
 export class TableCellComponent implements AfterViewInit, OnDestroy {
   @Input() row: any;
@@ -33,7 +26,7 @@ export class TableCellComponent implements AfterViewInit, OnDestroy {
 
   private componentRef: ComponentRef<any>;
 
-  constructor(private viewContainer: ViewContainerRef, private resolver: ComponentFactoryResolver) {}
+  constructor(private viewContainer: ViewContainerRef, private resolver: ComponentFactoryResolver) { }
 
   getValue(): any {
     return this.row[this.column.def.key];

@@ -1,6 +1,6 @@
 import {
   Component,
-  Input,
+  Input
 } from '@angular/core';
 
 @Component({
@@ -14,19 +14,7 @@ import {
         [style.backgroundSize]="backgroundSize()">
       </td>
     </tr>
-  `,
-  styles: [`
-    :host {
-      border: none !important;
-    }
-    td {
-      padding: 0 !important;
-      border: none !important;
-      background-repeat: repeat;
-      background-position: 0 -1px;
-    }
-
-  `]
+  `
 })
 export class DummyRowsComponent {
 

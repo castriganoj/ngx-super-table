@@ -1,4 +1,184 @@
-$font-family-base: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-base: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
 $font-size-base: 0.875rem;
-
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+
+
+[super-table-dummy-rows] td {
+  padding: 0 !important;
+  border: none !important;
+  background-repeat: repeat;
+  background-position: 0 -1px;
+}
+
+super-table-dummy-rows tbody.dummy-row, tbody.visible-rows {
+  border-top:none;
+}
+
+.filter-dropdown {
+  position: absolute;
+  background: white;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+.clear-filter {
+  border-bottom: 1px solid #DDD;
+  padding: 5px 0;
+}
+
+.close-dropdown {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #CCC;
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.close-dropdown:hover {
+  color: #AAA;
+}
+
+super-table-body {
+  display: block;
+  overflow: auto;
+}
+
+thead.sizing-thead th {
+  padding: 0 !important;
+  border-width: 0;
+}
+
+super-table-head {
+  overflow-y: scroll;
+  display: block;
+}
+
+super-table-head table {
+  width: 100%;
+  margin-bottom: 0!important;
+  border-bottom: none;
+}
+
+.hasSort {
+  cursor: pointer;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.filter-row td {
+  padding: 0;
+  vertical-align: middle;
+}
+
+super-table {
+  position: relative;
+  display: block;
+}
+
+.loading-message {
+  text-align: center;
+}
+
+[super-table-cell] {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+[super-table-resizer] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+}
+
+.notch.explicit {
+  background-color: rgba(22, 140, 239, 0.2);
+}
+
+.notch {
+  width: 100%;
+  height: 50%;
+  transform: translateY(50%);
+  box-shadow: inset 1px 0 #DDD;
+}
+
+[super-table-text-filter] {
+  position: relative;
+}
+
+[super-table-text-filter] input {
+  width: 100%;
+  font-size: 90%;
+  border: none;
+  border-radius: 0;
+}
+
+.hasContent {
+  background: #dff7ff;
+}
+
+.clear-btn {
+  position: absolute;
+  background: transparent;
+  color: black;
+  right: 0;
+  top: 0;
+  border: none;
+  font-size: 120%;
+}
+
+[super-table-enum-filter] {
+  position: relative;
+  display: block;
+  height: 100%;
+  font-size: 90%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+[super-table-enum-filter] button {
+  text-align: left;
+  margin: 0 5px;
+  display: block;
+  width: calc(100% - 10px);
+  height: 100%;
+  background: #ddd;
+  border: none;
+  border-radius: 2px;
+}
+
+super-table-enum-filter-dropdown {
+  position: absolute;
+  background: white;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+button.hasDisabled {
+  background: rgba(22, 140, 239, 0.2);
+}
+
+.enum-filter-dropdown {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+

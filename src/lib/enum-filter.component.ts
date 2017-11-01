@@ -25,35 +25,7 @@ import { forEach, values } from 'lodash';
       {{ choice }}
     </div>
     <button role="button" class="close-dropdown" (click)="destroyMe()">&times;</button>
-  `,
-  styles: [`
-    :host {
-      position: absolute;
-      background: white;
-      padding: 5px 10px;
-      border: 1px solid #ddd;
-      box-shadow: 0 1px 10px -1px rgba(0,0,0,0.2);
-    }
-    .clear-filter {
-      border-bottom: 1px solid #DDD;
-      padding: 5px 0;
-    }
-    .close-dropdown {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      border: none;
-      background: transparent;
-      color: #CCC;
-      display: block;
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
-    }
-    .close-dropdown:hover {
-      color: #AAA;
-    }
-  `]
+  `
 })
 export class EnumFilterDropdownComponent implements OnInit, OnDestroy {
   @Input() column: ColumnState;
@@ -107,35 +79,7 @@ export class EnumFilterDropdownComponent implements OnInit, OnDestroy {
       <span [hidden]="disabledFilterCount == 0">filtering {{disabledFilterCount}} value(s)</span>
     </button>
 
-  `,
-  styles: [`
-    :host {
-      position: relative;
-      display: block;
-      height: 100%;
-      font-size: 90%;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-    button {
-      text-align: left;
-      margin: 0 5px;
-      display: block;
-      width: calc(100% - 10px);
-      height: 100%;
-      background: #ddd;
-      border: none;
-      border-radius: 2px;
-    }
-    button.hasDisabled {
-      background: rgba(22, 140, 239, 0.2);
-    }
-    .enum-filter-dropdown {
-      position: absolute;
-      top: 100%;
-      z-index: 1;
-    }
-  `]
+  `
 })
 export class EnumFilterComponent implements OnInit, OnDestroy {
   @Input() filter: SuperTableFilter;

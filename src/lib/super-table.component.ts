@@ -7,7 +7,7 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
 import { SuperTableColumn, ColumnState, SuperTableOptions } from './interfaces';
 import { SuperTableState } from './super-table-state';
@@ -35,15 +35,6 @@ import { Subscription } from 'rxjs/Subscription';
 
     <div *ngIf="hasError">An error occurred.</div>
   `,
-  styles: [`
-    :host {
-      position: relative;
-      display: block;
-    }
-    .loading-message {
-      text-align: center;
-    }
-  `],
   providers: [SuperTableState]
 })
 export class SuperTableComponent implements OnInit, AfterContentInit, OnChanges, OnDestroy {

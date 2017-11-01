@@ -24,26 +24,7 @@ import { SuperTableState } from './super-table-state';
         </tr>
       </thead>
     </table>
-  `,
-  styles: [`
-    :host {
-      overflow-y: scroll;
-      display: block;
-    }
-    .hasSort {
-      cursor: pointer;
-    }
-    table {
-      table-layout: fixed;
-      width: 100%;
-      margin-bottom: 0;
-      border-bottom: none;
-    }
-    .filter-row td {
-      padding: 0;
-      vertical-align: middle;
-    }
-  `]
+  `
 })
 export class SuperTableHeadComponent {
   @Input() tableClasses: any;

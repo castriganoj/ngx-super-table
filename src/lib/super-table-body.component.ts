@@ -41,25 +41,7 @@ const DEBOUNCE_DELAY = 250;
         [rowCount]="rows.length - rowOffset - visibleRows.length - 1">
       </tbody>
     </table>
-  `,
-  styles: [`
-    :host {
-      display: block;
-      overflow: auto;
-    }
-    table {
-      table-layout: fixed;
-      width: 100%;
-      margin-bottom: 0;
-    }
-    thead.sizing-thead th {
-      padding: 0 !important;
-      border-width: 0;
-    }
-    tbody.dummy-rows, tbody.visible-rows {
-      border-top: none;
-    }
-  `]
+  `
 })
 export class SuperTableBodyComponent implements OnChanges {
   @Input() rows: Array<any>;
